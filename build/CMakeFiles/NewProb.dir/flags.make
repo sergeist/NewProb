@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/sergei/OP_GL_Project/NewProb/external/glfw/include -I/home/sergei/OP_GL_Project/NewProb/external/glad/include
 
 CXX_FLAGS =  -std=c++1y -g
 

@@ -73,11 +73,14 @@ CMAKE_BINARY_DIR = /home/sergei/OP_GL_Project/NewProb/build
 
 # The main recursive "all" target.
 all: CMakeFiles/NewProb.dir/all
+all: external/glfw/all
+all: external/glad/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: external/glfw/preinstall
+preinstall: external/glad/preinstall
 
 .PHONY : preinstall
 
@@ -111,8 +114,64 @@ clean: CMakeFiles/ContinuousStart.dir/clean
 clean: CMakeFiles/ContinuousMemCheck.dir/clean
 clean: CMakeFiles/ContinuousTest.dir/clean
 clean: CMakeFiles/ContinuousSubmit.dir/clean
+clean: external/glfw/clean
+clean: external/glad/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory external/glad
+
+# Recursive "all" directory target.
+external/glad/all: external/glad/CMakeFiles/glad.dir/all
+
+.PHONY : external/glad/all
+
+# Recursive "preinstall" directory target.
+external/glad/preinstall:
+
+.PHONY : external/glad/preinstall
+
+# Recursive "clean" directory target.
+external/glad/clean: external/glad/CMakeFiles/glad.dir/clean
+
+.PHONY : external/glad/clean
+
+#=============================================================================
+# Directory level rules for directory external/glfw
+
+# Recursive "all" directory target.
+external/glfw/all: external/glfw/src/all
+
+.PHONY : external/glfw/all
+
+# Recursive "preinstall" directory target.
+external/glfw/preinstall: external/glfw/src/preinstall
+
+.PHONY : external/glfw/preinstall
+
+# Recursive "clean" directory target.
+external/glfw/clean: external/glfw/src/clean
+
+.PHONY : external/glfw/clean
+
+#=============================================================================
+# Directory level rules for directory external/glfw/src
+
+# Recursive "all" directory target.
+external/glfw/src/all: external/glfw/src/CMakeFiles/glfw.dir/all
+
+.PHONY : external/glfw/src/all
+
+# Recursive "preinstall" directory target.
+external/glfw/src/preinstall:
+
+.PHONY : external/glfw/src/preinstall
+
+# Recursive "clean" directory target.
+external/glfw/src/clean: external/glfw/src/CMakeFiles/glfw.dir/clean
+
+.PHONY : external/glfw/src/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/NightlyMemCheck.dir
@@ -658,7 +717,8 @@ CMakeFiles/NightlyTest.dir/clean:
 # Target rules for target CMakeFiles/NewProb.dir
 
 # All Build rule for target.
-CMakeFiles/NewProb.dir/all:
+CMakeFiles/NewProb.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
+CMakeFiles/NewProb.dir/all: external/glad/CMakeFiles/glad.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewProb.dir/build.make CMakeFiles/NewProb.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewProb.dir/build.make CMakeFiles/NewProb.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sergei/OP_GL_Project/NewProb/build/CMakeFiles --progress-num=1,2 "Built target NewProb"
@@ -666,7 +726,7 @@ CMakeFiles/NewProb.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NewProb.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergei/OP_GL_Project/NewProb/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergei/OP_GL_Project/NewProb/build/CMakeFiles 21
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/NewProb.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergei/OP_GL_Project/NewProb/build/CMakeFiles 0
 .PHONY : CMakeFiles/NewProb.dir/rule
@@ -896,6 +956,60 @@ ContinuousSubmit: CMakeFiles/ContinuousSubmit.dir/rule
 CMakeFiles/ContinuousSubmit.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/clean
 .PHONY : CMakeFiles/ContinuousSubmit.dir/clean
+
+#=============================================================================
+# Target rules for target external/glfw/src/CMakeFiles/glfw.dir
+
+# All Build rule for target.
+external/glfw/src/CMakeFiles/glfw.dir/all:
+	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sergei/OP_GL_Project/NewProb/build/CMakeFiles --progress-num=5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21 "Built target glfw"
+.PHONY : external/glfw/src/CMakeFiles/glfw.dir/all
+
+# Build rule for subdir invocation for target.
+external/glfw/src/CMakeFiles/glfw.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergei/OP_GL_Project/NewProb/build/CMakeFiles 17
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/src/CMakeFiles/glfw.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergei/OP_GL_Project/NewProb/build/CMakeFiles 0
+.PHONY : external/glfw/src/CMakeFiles/glfw.dir/rule
+
+# Convenience name for target.
+glfw: external/glfw/src/CMakeFiles/glfw.dir/rule
+
+.PHONY : glfw
+
+# clean rule for target.
+external/glfw/src/CMakeFiles/glfw.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/clean
+.PHONY : external/glfw/src/CMakeFiles/glfw.dir/clean
+
+#=============================================================================
+# Target rules for target external/glad/CMakeFiles/glad.dir
+
+# All Build rule for target.
+external/glad/CMakeFiles/glad.dir/all:
+	$(MAKE) $(MAKESILENT) -f external/glad/CMakeFiles/glad.dir/build.make external/glad/CMakeFiles/glad.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/glad/CMakeFiles/glad.dir/build.make external/glad/CMakeFiles/glad.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sergei/OP_GL_Project/NewProb/build/CMakeFiles --progress-num=3,4 "Built target glad"
+.PHONY : external/glad/CMakeFiles/glad.dir/all
+
+# Build rule for subdir invocation for target.
+external/glad/CMakeFiles/glad.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergei/OP_GL_Project/NewProb/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glad/CMakeFiles/glad.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergei/OP_GL_Project/NewProb/build/CMakeFiles 0
+.PHONY : external/glad/CMakeFiles/glad.dir/rule
+
+# Convenience name for target.
+glad: external/glad/CMakeFiles/glad.dir/rule
+
+.PHONY : glad
+
+# clean rule for target.
+external/glad/CMakeFiles/glad.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/glad/CMakeFiles/glad.dir/build.make external/glad/CMakeFiles/glad.dir/clean
+.PHONY : external/glad/CMakeFiles/glad.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

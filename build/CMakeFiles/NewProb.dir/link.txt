@@ -1,1 +1,1 @@
-/usr/bin/c++  -std=c++1y -g CMakeFiles/NewProb.dir/src/main.cpp.o -o NewProb 
+/usr/bin/c++  -std=c++1y -g CMakeFiles/NewProb.dir/src/main.cpp.o -o NewProb  external/glfw/src/libglfw3.a external/glad/libglad.a -lpthread /usr/lib/librt.so -lm -ldl 

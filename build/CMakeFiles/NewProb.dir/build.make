@@ -98,6 +98,10 @@ NewProb_EXTERNAL_OBJECTS =
 
 NewProb: CMakeFiles/NewProb.dir/src/main.cpp.o
 NewProb: CMakeFiles/NewProb.dir/build.make
+NewProb: external/glfw/src/libglfw3.a
+NewProb: external/glad/libglad.a
+NewProb: /usr/lib/librt.so
+NewProb: /usr/lib/libm.so
 NewProb: CMakeFiles/NewProb.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sergei/OP_GL_Project/NewProb/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable NewProb"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/NewProb.dir/link.txt --verbose=$(VERBOSE)
