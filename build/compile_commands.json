@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/sergei/OP_GL_Project/NewProb/build",
+  "command": "/usr/bin/c++    -std=c++1y -O3 -DNDEBUG -o CMakeFiles/NewProb.dir/src/main.cpp.o -c /home/sergei/OP_GL_Project/NewProb/src/main.cpp",
+  "file": "/home/sergei/OP_GL_Project/NewProb/src/main.cpp"
+}
+]
