@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = 
 
-CXX_FLAGS =  -std=c++1y -O3 -DNDEBUG
+CXX_FLAGS =  -std=c++1y -g
 
